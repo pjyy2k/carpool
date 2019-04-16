@@ -1,0 +1,16 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+  <h1>Host List</h1>
+  {% if host_list %}
+  <ul>
+    {% for hosts in host_list %}
+      <li>
+        <a href="{{  Host.get_absolute_url }}">{{ hosts.hour_of_host }}시 {{ hosts.minutes_of_host }}분 <br> 최종 목적지 : {{ hosts.where_to_go }}</a> ({{hosts.host}})
+      </li>
+    {% endfor %}
+  </ul>
+  {% else %}
+    <p>오늘의 Carpool Host가 없습니다.</p>
+  {% endif %}       
+{% endblock %}

@@ -1,0 +1,12 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+  <h1>Car pool Home</h1>
+  <p>Welcome to Carpool, a website developed by <em>JinYoung Park</em>!</p>
+  <h2>현재 카풀 List</h2>
+  <p>Status</p>
+  <ul>
+      <li><strong>누적 카풀 Open 횟수 : </strong>{{num_hosts}}</li>
+      <li><strong>누적 탑승자 수 : </strong>{{num_clients}}</li>
+  </ul>
+{% endblock %}
